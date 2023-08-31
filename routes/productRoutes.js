@@ -38,7 +38,7 @@ productRouter.put(
 productRouter.get("/get-product", getProductController);
 
 //single product
-productRouter.get("/get-product/:name", getSingleProductController);
+productRouter.get("/get-product/:slug", getSingleProductController);
 
 
 //get photo
