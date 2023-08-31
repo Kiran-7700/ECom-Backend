@@ -77,7 +77,7 @@ const getProductController = async (req, res) => {
 const getSingleProductController = async (req, res) => {
   try {
     const product = await productSchema
-      .findOne({ name: req.params.name })
+      .findOne({ slug: req.params.slug })
       .select("-photo")
       .populate("category");
     res.status(200).send({
